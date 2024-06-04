@@ -75,11 +75,11 @@ const Home = () => {
 			const response = await fetch("https://playground.4geeks.com/todo/todos/" + id, {
 				method: "DELETE"
 			})
-			if (response.ok) {
-				console.log("No hay error", response.status)
+			if (!response.ok) {
+				console.log("No se pudo borrar la tarea", response.status)
 				return;
 			}
-			const data = await response.json()
+			const data = await response
 			console.log(data)
 			const newList = todoList.filter((item) => item.id != id)
 			setTodoList(newList)
@@ -94,11 +94,11 @@ const Home = () => {
 			const response = await fetch("https://playground.4geeks.com/todo/users/AdriCabrera", {
 				method: "DELETE"
 			})
-			if (response.ok) {
-				console.log("No hay error", response.status)
+			if (!response.ok) {
+				console.log("No se pudo borrar el usuario", response.status)
 				return;
 			}
-			const data = await response.json()
+			const data = await response
 			console.log(data)
 			setTodoList([])
 
