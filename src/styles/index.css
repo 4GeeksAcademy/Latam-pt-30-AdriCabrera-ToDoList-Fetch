@@ -1,4 +1,48 @@
+h1 {
+    display: flex;
+    justify-content: center;
+    color: pink;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1rem;
+}
 
+ul li {
+    border: 1px solid gray;
+    list-style: none;
+    padding: 5px;
+    display: flex;
+    justify-content: space-between;
+}
+
+input {
+    border: none;
+    width: 100%;
+}
+
+li .delete{
+    visibility: hidden;
+}
+
+li:hover .delete{
+    visibility: visible;
+}
+
+.delete {
+    color: rgb(244, 113, 113);
+
+}
+
+.noTasks {
+    display: flex;
+    justify-content: center; 
+}
+
+button {
+    cursor: pointer;
+    background: red;
+    border-radius: 5px;
+
+}
 /* 
 
     You can write your own styles here...
