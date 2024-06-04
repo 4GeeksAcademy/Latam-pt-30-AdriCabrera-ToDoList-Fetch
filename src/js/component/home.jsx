@@ -101,6 +101,7 @@ const Home = () => {
 			const data = await response
 			console.log(data)
 			setTodoList([])
+			createUser()
 
 		} catch (error) {
 			console.log(error)
@@ -108,7 +109,6 @@ const Home = () => {
 	}
 
 	useEffect(() => {
-		createUser()
 		getTodo()
 	}, [])
 
