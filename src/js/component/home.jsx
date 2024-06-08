@@ -109,6 +109,7 @@ const Home = () => {
 	}
 
 	useEffect(() => {
+		createUser()
 		getTodo()
 	}, [])
 
